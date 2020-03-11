@@ -38,5 +38,4 @@ export default {
 .title {
   font-size: 50px;
 }
-
 </style>

@@ -14,19 +14,19 @@
     <v-icon>mdi-refresh</v-icon>
     </v-app-bar>
     <v-content>
-     <HelloWorld />
+     <Index />
     </v-content>
     <Footer />
   </v-app>
 </template>
 <script>
-import HelloWorld from './components/Card';
+import Index from './components/Index';
 import Footer from './components/Footer';
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    Index,
     Footer
   },
   data: () => ({

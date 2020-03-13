@@ -33,6 +33,14 @@ import Card from '@/components/Card';
     name: 'Index',
     components: {
       Card
+    },
+     data() {
+    return {
+      search: ''
     }
+  },
+  methods: {
+      searchData () {}
   }
+}
 </script>

@@ -26,21 +26,32 @@
     </v-row>
   </v-container>
 </template>
-
 <script>
+import { reactive, computed } from "@vue/composition-api";
 import Card from '@/components/Card';
   export default {
     name: 'Index',
     components: {
-      Card
+    Card
     },
-     data() {
+    setup() {
+    const state = reactive({
+      count: 0,
+      double: computed(() => state.count * 2)
+    });
+    const increment = () => state.count++;
     return {
+      state,
+      increment
+      }
+    },
+    data () {
+      return {
       search: ''
-    }
-  },
-  methods: {
+      }
+    },
+    methods: {
       searchData () {}
-  }
+    }
 }
 </script>

@@ -1,50 +1,46 @@
 <template>
-  <v-layout class="top" justify-center align-center>
-      <v-flex xs6 mt-12>
+  <v-container class="top">
+     <div class="d-block mb-12 mt-8 text-center pa-2 info accent-4 white--text"> <h4 class="display-1">
+      iTunes Search App
+     </h4></div>
+      <v-row class="text-center">
+      <v-layout mt-12 mb-12 justify-center align-center>
+        <v-flex xs6>
         <v-text-field
           v-model="search" autofocus
           @keyup.enter="searchData();"
           label="Enter Artists Name"
           append-icon="search"
-       ></v-text-field>
-      </v-flex>
-</v-layout>
+          ></v-text-field>
+         </v-flex>
+      </v-layout>
+      <v-col cols="12">
+     <Card style="display:none" />
+      </v-col>
+      <v-col class="mt-12">
+       <div>
+    <div class="d-block pa-2 success accent-4 white--text"><h4 class="display-1">
+    Search The iTunes Catalogue
+    </h4></div>
+   </div>
+    </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script>
-export default {
-  components: {
-  },
-  data() {
-    return {
-      search: ''
-    }
-  },
-  methods: {
-      searchData () {
-         this.$router.push(`results/${this.search}`)
-      }
-  }
+import Card from '@/components/Card'
+  export default {
+    name: 'Index',
+    components: {
+      Card
+    },
+   data: () => ({
+
+  }),
 }
 </script>
-<style>
-* {
-  text-align: center;
-}
+<style  scoped>
 .top {
-  background-color:ghostwhite;
-  padding-top: 70px;
+  margin-top: 60px;
 }
 </style>
-
-
-<style>
-* {
-  text-align: center;
-}
-
-
-h1 {
-  padding: 20px;
-}
-</style>
-

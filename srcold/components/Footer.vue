@@ -1,5 +1,4 @@
 <template>
- <section class="container">
  <v-card height="150">
     <v-footer
       absolute
@@ -13,7 +12,6 @@
       </v-col>
     </v-footer>
   </v-card>
- </section>
 </template>
 
 <script>
@@ -24,11 +22,6 @@ export default {
 
 <style scoped>
 .v-footer {
-width: 100%;
 background-color: gainsboro!important;
-}
-.text-center {
-  text-align:center;
-  margin: 0 auto;
 }
 </style>

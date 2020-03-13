@@ -1,35 +1,38 @@
-Vuetify iTunes Search Pink Version
+Vuetify iTunes Search
 
 ## Introduction
 
-Finds iTunes artists with profile and pictures/links to albums
+Search and display artists albums from iTunes catalogue
 
-For Android/IOS
+## Demo
+
+## Repo
+
+## Author
+
+Paul Anthony  McGowan
+
+## Author URL
+
+https://www.xhostcom.com
 
 ## Requirements
 
 NPM/Node
  Yarn
- Vue CLI
-
+Vue CLI
 
 ## Installation
 
-Clone and run yarn/npm i
+Clone and run yarn
 
 ## Configuration
-
-Usual Nuxt goodies, middleware, routes etc. 
 
 npm start
 
 ## Documentation
 
-
-
 ## Troubleshooting/Issues
-
-
 
 ## FAQ
 
@@ -39,13 +42,7 @@ A. Yes. This is perfectly normal.
 
 ## Maintainers/Sponsors
 
-
-
-
-
 ## Development
-
-
 
 ## License
 

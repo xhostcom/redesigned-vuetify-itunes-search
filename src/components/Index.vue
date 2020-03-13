@@ -35,12 +35,18 @@ import Card from '@/components/Card';
     components: {
     Card
     },
-    setup() {},
+    setup() {
+
+    },
     data () {
       return {}
     },
     methods: {
-      searchData () {}
+    searchData() {
+      console.log('It Works')
     }
+  }
 }
 </script>
+
+

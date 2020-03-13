@@ -27,28 +27,17 @@
   </v-container>
 </template>
 <script>
-import { reactive, computed } from "@vue/composition-api";
+// eslint-disable-next-line no-unused-vars
+import { reactive, computed, toRefs } from "@vue/composition-api";
 import Card from '@/components/Card';
   export default {
     name: 'Index',
     components: {
     Card
     },
-    setup() {
-    const state = reactive({
-      count: 0,
-      double: computed(() => state.count * 2)
-    });
-    const increment = () => state.count++;
-    return {
-      state,
-      increment
-      }
-    },
+    setup() {},
     data () {
-      return {
-      search: ''
-      }
+      return {}
     },
     methods: {
       searchData () {}

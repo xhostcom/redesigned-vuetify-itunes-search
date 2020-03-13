@@ -6,7 +6,7 @@ import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import VueCompositionApi from '@vue/composition-api';
 import axios from "axios";
-
+Vue.store = Vue.prototype.store = 'store';
 Vue.prototype.$http = axios;
 Vue.prototype.axios = axios;
 

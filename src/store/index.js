@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-      albums: []
+      albums: [],
+      message: 'Hello Vuex!'
   },
     mutations: {
       add (state, payload) {

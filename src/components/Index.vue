@@ -12,23 +12,22 @@
         <v-flex xs6 mt-12 mb-12>
         <v-text-field
           v-model="search" autofocus
-          @keyup.enter="searchData(params)"
+          @keyup.enter="searchData($event)"
           label="Enter Artists Name"
           append-icon="search"
           ></v-text-field>
         </v-flex>
       </v-layout>
       <div class="d-block mb-12 mt-12 pa-2 deep-purple accent-4 white--text"><h4 class="display-1">
-    Search The iTunes Catalogue
-    </h4></div>
-    <Card style="display:none;" />
+        {{ message }}
+      </h4></div>
+      <Card style="display:none;" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 <script>
-// eslint-disable-next-line no-unused-vars
-import { reactive, computed, toRefs } from "@vue/composition-api";
+import store from '../store'
 import Card from '@/components/Card';
   export default {
     name: 'Index',
@@ -41,9 +40,24 @@ import Card from '@/components/Card';
     data () {
       return {}
     },
+    computed: {
+       message() {
+         return store.state.message
+      }
+    },
     methods: {
-    searchData() {
-      console.log('It Works')
+    async searchData($event) {
+      let config = {
+          headers: {
+            'Accept': 'application/json'
+          }
+      }
+      let artist = $event.target.value
+      const response = await this.$http.get(`https://itunes.apple.com/search?term=artist&entity=album`, config);
+            //store.commit('add', response.data.results);
+            //this.response = response.data
+            console.log(artist)
+            console.log(response)
     }
   }
 }

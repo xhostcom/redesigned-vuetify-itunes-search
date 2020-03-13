@@ -1,18 +1,41 @@
 <template>
   <v-app>
-    <v-toolbar dark color="primary">
-    <v-toolbar-side-icon to="/"><v-icon>menu</v-icon></v-toolbar-side-icon>
-    <v-spacer></v-spacer>
-    <v-toolbar-title class="white--text">
-      <router-link class="title" to="/">Vuetify iTunes Search</router-link>
-    </v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-btn to="/" icon>
-      <v-icon>refresh</v-icon>
-    </v-btn>
-  </v-toolbar>
-  <Index />
-  <Footer />
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex">
+        <v-img
+          alt="iTunes Logo"
+          class="shrink mr-2"
+          contain
+          src="./assets/ituneslight.webp"
+          transition="scale-transition"
+          width="30"
+        />
+
+      </div>
+       <div class="d-flex">
+        <v-img
+          alt="iTunes Name"
+          class="shrink"
+          contain
+          min-width="100"
+          src="./assets/itunes.webp"
+          width="100"
+        />
+         </div>
+      <v-spacer></v-spacer>
+      <v-btn to="/" icon>
+       <v-icon>mdi-refresh</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content>
+    <Index/>
+    </v-content>
+    <Footer />
   </v-app>
 </template>
 <script>
@@ -21,8 +44,8 @@ import Footer from '@/components/Footer';
 export default {
   name: 'App',
   components: {
-  Index,
-  Footer
+    Index,
+    Footer
   },
   data: () => ({
     //

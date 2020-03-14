@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 <template>
   <v-container>
     <v-row class="text-center">
@@ -19,8 +20,8 @@
         </v-flex>
       </v-layout>
       <div class="d-block mb-12 mt-12 pa-2 deep-purple accent-4 white--text"><h4 class="display-1">
-        {{ message }}
-      </h4></div>
+        {{ count }}</h4>
+      </div>
       <Card style="display:none;" />
       </v-col>
     </v-row>
@@ -41,9 +42,9 @@ import Card from '@/components/Card';
       return {}
     },
     computed: {
-       message() {
-         return store.state.message
-      }
+       count () {
+       return store.state.count
+    }
     },
     methods: {
     async searchData($event) {
@@ -53,11 +54,14 @@ import Card from '@/components/Card';
           }
       }
       let artist = $event.target.value
-      const response = await this.$http.get(`https://itunes.apple.com/search?term=artist&entity=album`, config);
-            //store.commit('add', response.data.results);
-            //this.response = response.data
-            console.log(artist)
+      const response = await this.$http.get(`https://itunes.apple.com/search?term=${artist}&entity=album`, config);
+            this.response = response.data.results
+            this.$store.commit(JSON.stringify(response))
             console.log(response)
+            store.subscribe((mutation, state) => {
+	// Store the state object as a JSON string
+	localStorage.setItem('store', JSON.stringify(state));
+});
     }
   }
 }

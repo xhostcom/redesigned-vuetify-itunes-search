@@ -12,7 +12,7 @@
           contain
           src="./assets/ituneslight.webp"
           transition="scale-transition"
-          width="30"
+          width="40"
         />
 
       </div>

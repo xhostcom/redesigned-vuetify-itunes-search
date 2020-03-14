@@ -5,12 +5,12 @@
       color="primary"
       dark
     >
-      <div class="d-flex">
-        <v-img
+          <div class="text-center">
+          <v-img
           alt="iTunes Logo"
-          class="shrink mr-2"
+          class="shrink"
           contain
-          src="./assets/ituneslight.webp"
+          src="./assets/apple.webp"
           transition="scale-transition"
           width="40"
         />
@@ -24,18 +24,7 @@
           src="./assets/itunes.webp"
           width="100"
         />
-         <v-spacer></v-spacer>
-         <div class="text-center">
-           <v-img
-          alt="iTunes Logo"
-
-          contain
-          src="./assets/apple.webp"
-          transition="scale-transition"
-          width="40"
-        />
-         </div>
-         </div>
+       </div>
       <v-spacer></v-spacer>
       <v-btn to="/" icon>
        <v-icon>mdi-refresh</v-icon>

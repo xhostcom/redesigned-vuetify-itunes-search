@@ -29,22 +29,30 @@
 </template>
 <script>
 import store from '../store'
+// eslint-disable-next-line no-unused-vars
+import { mapState } from 'vuex'
+// eslint-disable-next-line no-unused-vars
+import { createHelpers } from 'vuex-map-fields';
 import Card from '@/components/Card';
+ // eslint-disable-next-line no-unused-vars
+ const { mapFields } = createHelpers({
+    getterType: 'getArtistField',
+    mutationType: 'updateArtistField',
+    })
   export default {
     name: 'Index',
     components: {
     Card
     },
     setup() {
-
     },
     data () {
       return {}
     },
     computed: {
-       count () {
-       return store.state.count
-    }
+    ...mapFields([
+      'artist'
+    ])
     },
     methods: {
     async searchData($event) {

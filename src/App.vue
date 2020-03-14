@@ -14,8 +14,7 @@
           transition="scale-transition"
           width="40"
         />
-
-      </div>
+       </div>
        <div class="d-flex">
         <v-img
           alt="iTunes Name"
@@ -25,6 +24,17 @@
           src="./assets/itunes.webp"
           width="100"
         />
+         <v-spacer></v-spacer>
+         <div class="text-center">
+           <v-img
+          alt="iTunes Logo"
+
+          contain
+          src="./assets/apple.webp"
+          transition="scale-transition"
+          width="40"
+        />
+         </div>
          </div>
       <v-spacer></v-spacer>
       <v-btn to="/" icon>

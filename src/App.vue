@@ -53,11 +53,22 @@ export default {
   });
  },
  methods: {
-        fetchData(e) {
+      fetchData(e) {
         if (e.key == "Enter") {
-        console.log(this.localValue);
+          console.log(this.localValue);
+       fetch(`${this.url_base}${this.localValue}`)
+          .then(response => {
+            return response.json();
+        })
+        .then((data) => {
+    console.log(data);
+  });
         }
-    }
- }
+      },
+      setResults(results) {
+         this.albums = results;
+
+   }
+  }
 }
 </script>

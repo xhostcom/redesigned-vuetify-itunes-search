@@ -1,17 +1,13 @@
-import Vue from 'vue'
-import App from './App.vue'
-import store from './store'
+import Vue from 'vue';
+import App from './App.vue';
+import store from './store';
 import vuetify from './plugins/vuetify';
-import 'roboto-fontface/css/roboto/roboto-fontface.css'
-import '@mdi/font/css/materialdesignicons.css'
-import VueCompositionApi from '@vue/composition-api';
+import 'roboto-fontface/css/roboto/roboto-fontface.css';
+import '@mdi/font/css/materialdesignicons.css';
 import axios from "axios";
 Vue.store = Vue.prototype.store = 'store';
 Vue.prototype.$http = axios;
 Vue.prototype.axios = axios;
-
-
-Vue.use(VueCompositionApi);
 
 
 Vue.config.productionTip = false

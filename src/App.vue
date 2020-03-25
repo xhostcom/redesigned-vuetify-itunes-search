@@ -1,6 +1,6 @@
 <template>
   <v-app>
-  <h1>Appbar</h1>
+  <Appbar />
   <v-content>
     <v-container>
     <v-row class="text-center">
@@ -31,6 +31,7 @@
   </v-app>
 </template>
 <script>
+import Appbar from '@/components/Appbar';
 import Footer from '@/components/Footer';
 export default {
   name: 'App',
@@ -38,6 +39,7 @@ export default {
     value: String
   },
   components: {
+  Appbar,
   Footer
   },
   data: () => ({

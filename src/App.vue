@@ -1,49 +1,40 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-          <div class="text-center">
-          <v-img
-          alt="iTunes Logo"
-          class="shrink"
-          contain
-          src="./assets/apple.webp"
-          transition="scale-transition"
-          width="40"
-        />
-       </div>
-       <div class="d-flex">
-        <v-img
-          alt="iTunes Name"
-          class="shrink"
-          contain
-          min-width="100"
-          src="./assets/itunes.webp"
-          width="100"
-        />
-       </div>
-      <v-spacer></v-spacer>
-      <v-btn to="/" icon>
-       <v-icon>mdi-refresh</v-icon>
-      </v-btn>
-    </v-app-bar>
 
-    <v-content>
-    <Index/>
+  <v-content>
+    <v-container>
+    <v-row class="text-center">
+      <v-col cols="12">
+        <v-img
+          :src="require('./assets/itunesicon.webp')"
+          class="my-3"
+          contain
+          height="90"
+        />
+    <v-layout mt-12 mb-12 justify-center align-center>
+        <v-flex xs6 mt-12 mb-12>
+        <v-text-field
+          v-model="search" autofocus
+          @keyup.enter="searchData($event)"
+          label="Enter Artists Name"
+          append-icon="search"
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+       <h1>Card Contents</h1>
+      </v-col>
+    </v-row>
+  </v-container>
     </v-content>
     <Footer />
   </v-app>
 </template>
 <script>
-import Index from '@/components/Index';
 import Footer from '@/components/Footer';
 export default {
   name: 'App',
   components: {
-    Index,
+  
     Footer
   },
   data: () => ({

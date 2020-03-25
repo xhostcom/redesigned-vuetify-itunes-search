@@ -1,4 +1,8 @@
-//Use Examples//
+module.exports = {
+  devServer: {
+    proxy: 'http://localhost:8080',
+}
+}
 
 /*var webpack = require('webpack');
 module.exports = {

@@ -66,10 +66,7 @@ import Card from '@/components/Card';
             this.response = response.data.results
             this.$store.commit(JSON.stringify(response))
             console.log(response)
-            store.subscribe((mutation, state) => {
-	// Store the state object as a JSON string
-	localStorage.setItem('store', JSON.stringify(state));
-});
+
     }
   }
 }

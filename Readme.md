@@ -30,15 +30,16 @@ Clone and run yarn
 
 npm start
 
-## Documentation
-
-## Troubleshooting/Issues
-
 ## FAQ
 
 Q. Is this normal?
 
 A. Yes. This is perfectly normal.
+
+## Documentation
+
+## Troubleshooting/Issues
+
 
 ## Maintainers/Sponsors
 
